@@ -9,4 +9,4 @@ COPY tsconfig.json ./
 COPY src ./src
 RUN yarn tsc
 
-CMD ["yarn", "start"]
+CMD ["yarn", "node", "/app/sdbridge/dist"]
