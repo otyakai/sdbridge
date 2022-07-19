@@ -1,0 +1,5 @@
+.yarn
+.vscode
+.pnp.*
+dist
+data

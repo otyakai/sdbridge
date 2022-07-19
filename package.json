@@ -1,0 +1,40 @@
+{
+    "name": "sdbridge",
+    "packageManager": "yarn@3.2.1",
+    "type": "module",
+    "scripts": {
+        "start": "node dist",
+        "build": "tsc",
+        "typeorm": "typeorm -d ./dist/db/data-source.js",
+        "migrate": "typeorm -d ./dist/db/data-source.js migration:run"
+    },
+    "devDependencies": {
+        "@rinsuki/eslint-config": "^2.0.0",
+        "@rinsuki/prettier-config": "^1.5.0",
+        "@types/better-sqlite3": "^7.5.0",
+        "@types/node": "^18.0.6",
+        "eslint": "^8.20.0",
+        "nodemon": "^2.0.19",
+        "prettier": "^2.7.1",
+        "typescript": "^4.7.4"
+    },
+    "dependencies": {
+        "@slack/rtm-api": "^6.0.0",
+        "@slack/web-api": "^6.7.2",
+        "better-sqlite3": "^7.6.2",
+        "discord.js": "^14.0.2",
+        "typeorm": "^0.3.7",
+        "zod": "^3.17.9"
+    },
+    "eslintConfig": {
+        "extends": [
+            "@rinsuki"
+        ],
+        "parserOptions": {
+            "project": [
+                "./tsconfig.json"
+            ]
+        }
+    },
+    "prettier": "@rinsuki/prettier-config"
+}
